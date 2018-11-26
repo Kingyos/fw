@@ -6,10 +6,10 @@
     </div>
     <router-view/>
 
-      <fw-footer></fw-footer>
       <fw-header></fw-header>
       <fw-input></fw-input>
       <fw-list></fw-list>
+       <fw-footer></fw-footer>
   </div>
 </template>
 <script>
