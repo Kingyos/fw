@@ -1,14 +1,32 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">home</router-link>
+      <router-link to="/about">about</router-link>
     </div>
     <router-view/>
-     <el-button>Default</el-button>
+
+      <fw-header></fw-header>
+      <fw-input></fw-input>
+      <fw-list></fw-list>
+       <fw-footer></fw-footer>
   </div>
 </template>
+<script>
+import FwHeader from './components/FwHeader.vue'
+import FwInput from './components/FwInput.vue'
+import FwList from './components/FwList.vue'
+import FwFooter from './components/FwFooter.vue'
 
+export default {
+  components: {
+    FwHeader,
+    FwInput,
+    FwList,
+    FwFooter
+  }
+}
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -17,16 +35,5 @@
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
